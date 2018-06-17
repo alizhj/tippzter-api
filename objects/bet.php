@@ -12,9 +12,6 @@ class Bet{
     public $goal_home;
     public $goal_away;
 
-    
-    
-    //echo 
     // constructor with $db as database connection
     public function __construct($db){
         $this->conn = $db;
@@ -22,10 +19,10 @@ class Bet{
 
     // read products
     function read(){
-
+        
         $userId = isset($_GET['userid']) ? $_GET['userid'] : die();
         $tournamentId = isset($_GET['tournamentid']) ? $_GET['tournamentid'] : die();
-
+        
         $query = "SELECT *
 					FROM bets
 					WHERE user_id=". $userId ." AND ". $tournamentId;
