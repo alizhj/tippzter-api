@@ -25,7 +25,7 @@ class Bet{
         
         $query = "SELECT *
 					FROM bets
-					WHERE user_id=". $userId ." AND ". $tournamentId;
+					WHERE user_id=". $userId ." AND tournament_id=". $tournamentId;
     
         // prepare query statement
         $stmt = $this->conn->prepare($query);
